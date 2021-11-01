@@ -2,15 +2,14 @@ import React, { Component, ReactNode } from 'react';
 
 import { IOwnProps } from './types';
 
-class MunicipalWard extends Component<IOwnProps> {
-
+class SidePanel extends Component<IOwnProps> {
   render(): ReactNode {
     return (
       <div>
-        Municipal Ward
+        Main Navigation
       </div>
-    )
-  } 
+    );
+  }
 }
 
-export default MunicipalWard;
+export default SidePanel;
