@@ -2,14 +2,14 @@ import React, { Component, ReactNode } from 'react';
 
 import { IOwnProps } from './types';
 
-class SidePanel extends Component<IOwnProps> {
+class MainDrawer extends Component<IOwnProps> {
   render(): ReactNode {
     return (
       <div>
-        Main Navigation
+        Main Drawer
       </div>
     );
   }
 }
 
-export default SidePanel;
+export default MainDrawer;

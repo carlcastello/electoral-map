@@ -1,16 +1,14 @@
-import React, { Component, ReactNode } from 'react';
+import { connect } from 'react-redux';
 
-import { IOwnProps } from './types';
+import { handleDrawerToggle } from '../../components/main-drawer/action';
 
-class MunicipalWard extends Component<IOwnProps> {
+import MunicipalWard from './component';
 
-  render(): ReactNode {
-    return (
-      <div>
-        Municipal Ward
-      </div>
-    )
-  } 
+const mapDispatchToProps = {
+  handleDrawerToggle
 }
 
-export default MunicipalWard;
+export default connect(
+  null,
+  mapDispatchToProps,
+)(MunicipalWard);

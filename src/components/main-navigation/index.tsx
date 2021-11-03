@@ -1,5 +1,5 @@
 import React, { Component, ReactNode } from 'react';
-import { AppBar, Button, Toolbar, Typography, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, } from '@mui/material';
 
 import { IOwnProps } from './types';
 // import { Box } from '@mui/system';
