@@ -1,7 +1,7 @@
 export interface IOwnProps {
-  handleDrawerToggle: (drawerState: boolean) => null
+  mainDrawerData: any
 }
 
 export interface IReduxProps {
-  
+  handleDrawerToggle: (drawerState: boolean) => null
 }

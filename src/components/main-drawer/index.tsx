@@ -1,15 +1,19 @@
-import React, { Component, ReactNode } from 'react';
+import { connect } from 'react-redux';
 
-import { IOwnProps } from './types';
+import { IReduxStore } from '../../store/types';
 
-class MainDrawer extends Component<IOwnProps> {
-  render(): ReactNode {
-    return (
-      <div>
-        Main Drawer
-      </div>
-    );
-  }
+import MainDrawer from './component';
+
+import { mainDrawerDataSelector } from './selectors';
+
+const mapStateToProps = (state: IReduxStore) => ({
+  mainDrawerData: mainDrawerDataSelector(state),
+});
+
+const mapDispatchToProps = {
 }
 
-export default MainDrawer;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(MainDrawer);
