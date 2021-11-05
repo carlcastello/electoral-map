@@ -1,7 +1,5 @@
 import React, { Component, ReactNode } from 'react';
 
-// import { Drawer } from '@mui/material';
-// import { withStyles } from '@mui/styles';
 import injectSheet from 'react-jss'
 
 import styles from './styles';
@@ -17,7 +15,9 @@ class MainDrawer extends Component<IOwnProps & IReduxProps> {
     
     return (
       <div>
+        <h1>
         Hello World
+        </h1>
       </div>
     );
   }

@@ -1,17 +1,24 @@
 import React, { Component, ReactNode } from 'react';
-// import { AppBar, Toolbar, Typography, } from '@mui/material';
 
+import injectSheet from 'react-jss'
+
+import styles from './styles';
 import { IOwnProps } from './types';
 
 class MainNavigation extends Component<IOwnProps> {
   
   render(): ReactNode {
+    const {
+      classes: {
+        component
+      }
+    } = this.props;
     return (
-      <div>
-        Main Navigation
-      </div>
-    );
+      <nav className={component}>
+        Logo
+      </nav>
+     );
   }
 }
 
-export default MainNavigation;
+export default injectSheet(styles)(MainNavigation);
