@@ -3,7 +3,6 @@ export interface IMainDrawer {
 }
 
 export interface IOwnProps {
-
 }
 
 export interface IReduxProps {

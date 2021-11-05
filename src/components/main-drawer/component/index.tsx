@@ -1,11 +1,14 @@
-import { Drawer, Toolbar } from '@mui/material';
 import React, { Component, ReactNode } from 'react';
 
+// import { Drawer } from '@mui/material';
+// import { withStyles } from '@mui/styles';
+import injectSheet from 'react-jss'
+
+import styles from './styles';
 import { IOwnProps, IReduxProps } from './types';
 
 class MainDrawer extends Component<IOwnProps & IReduxProps> {
   render(): ReactNode {
-    const drawerWidth = '30vw';
     const {
       mainDrawerData: {
         drawerState
@@ -13,18 +16,11 @@ class MainDrawer extends Component<IOwnProps & IReduxProps> {
     } = this.props;
     
     return (
-      <Drawer
-        anchor="right"
-        variant="permanent"
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
-        }}>
-          Potato Salad
-      </Drawer>
+      <div>
+        Hello World
+      </div>
     );
   }
 }
 
-export default MainDrawer;
+export default injectSheet(styles)(MainDrawer);

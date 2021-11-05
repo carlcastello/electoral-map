@@ -1,6 +1,3 @@
-import { createTheme } from "@mui/material";
+export default {
 
-
-export default createTheme({
-  
-});
+}
