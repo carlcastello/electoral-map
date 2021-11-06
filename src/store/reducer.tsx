@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { mainDrawerReducer } from "../components/main-drawer/reducers";
+import { asideReducer } from "../components/aside/reducers";
 
 export default combineReducers({
-  mainDrawer: mainDrawerReducer
+  asideData: asideReducer
 });

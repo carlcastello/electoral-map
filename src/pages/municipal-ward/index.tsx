@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { handleDrawerToggle } from '../../components/main-drawer/action';
+import { handleAsideToggle } from '../../components/aside/action';
 import { IReduxStore } from '../../store/types';
 
 import MunicipalWard from './component';
@@ -9,7 +9,7 @@ const mapStateToProps = (state: IReduxStore) => ({
 });
 
 const mapDispatchToProps = {
-  handleDrawerToggle
+  handleAsideToggle
 }
 
 export default connect(

@@ -5,7 +5,7 @@ import injectSheet from 'react-jss'
 import styles from './styles';
 import { IOwnProps, IReduxProps } from './types';
 
-class MainDrawer extends Component<IOwnProps & IReduxProps> {
+class Aside extends Component<IOwnProps & IReduxProps> {
   render(): ReactNode {
     const {
       mainDrawerData: {
@@ -14,13 +14,15 @@ class MainDrawer extends Component<IOwnProps & IReduxProps> {
     } = this.props;
     
     return (
-      <div>
-        <h1>
-        Hello World
-        </h1>
-      </div>
+      <aside>
+        <div>
+          <h1>
+            Hello World
+          </h1>
+        </div>
+      </aside>
     );
   }
 }
 
-export default injectSheet(styles)(MainDrawer);
+export default injectSheet(styles)(Aside);

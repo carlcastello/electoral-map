@@ -1,5 +1,5 @@
 import { createReducers } from '../../store/utils';
-import { FETCH_DRAWER_ACTION } from './action';
+import { FETCH_ASIDE_ACTION } from './action';
 import { IMainDrawer } from './component/types';
 
 
@@ -8,8 +8,8 @@ const initialStore: any = {
   drawerState: false
 }
 
-export const mainDrawerReducer = createReducers(initialStore, {
-  [FETCH_DRAWER_ACTION]: (state: IMainDrawer, payload: IMainDrawer) => {
+export const asideReducer = createReducers(initialStore, {
+  [FETCH_ASIDE_ACTION]: (state: IMainDrawer, payload: IMainDrawer) => {
     return ({
       ...state,
       ...payload
