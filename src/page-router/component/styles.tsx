@@ -8,7 +8,9 @@ export default (theme: any) => ({
     h1: {
       fontFamily: theme.typography.headingFontFamily,
       fontWeight: 600,
-      fontSize: '2.50rem'
+      fontSize: '2.50rem',
+      margin: '1.5rem 0',
+      
     },
     h2: {
       fontFamily: theme.typography.headingFontFamily,
@@ -37,5 +39,15 @@ export default (theme: any) => ({
       fontWeight: 200,
       fontSize: '1.25rem'
     },
+    section: {
+      ['aside &']: {
+        paddingLeft: `${theme.spacing * 2}px`,
+        paddingRight: `${theme.spacing * 2}px`
+      }
+    }
+  },
+
+  main: {
+    
   }
 });
