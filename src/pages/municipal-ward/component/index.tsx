@@ -7,19 +7,9 @@ import { IOwnProps, IReduxProps } from './types';
 class MunicipalWard extends Component<IOwnProps & IReduxProps> {
 
   render(): ReactNode {
-    const {
-      handleDrawerToggle 
-    } = this.props; 
-    
     return (
       <div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <button  onClick={() => handleDrawerToggle(true)}>
-          Button
-        </button>
+
       </div>
     )
   } 
