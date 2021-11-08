@@ -1,4 +1,4 @@
-import { ICity } from '../components/aside/component/types';
+import { ICity } from '../layouts/aside/component/types';
 
 export interface IAction {
   type: string,

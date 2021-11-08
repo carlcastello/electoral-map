@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { asideReducer } from "../components/aside/reducers";
+import { asideReducer } from "../layouts/aside/reducers";
 
 export default combineReducers({
   asideData: asideReducer

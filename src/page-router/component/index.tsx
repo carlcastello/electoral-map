@@ -5,8 +5,8 @@ import injectSheet from 'react-jss'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import MunicipalWard from '../../pages/municipal-ward';
-import MainNavigation from '../../components/main-navigation';
-import Aside from '../../components/aside';
+import MainNavigation from '../../layouts/main-navigation';
+import Aside from '../../layouts/aside';
 
 import styles from './styles';
 import { IOwnProps } from './types';
