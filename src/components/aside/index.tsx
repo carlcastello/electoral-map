@@ -7,7 +7,8 @@ import Aside from './component';
 import { asideDataSelector } from './selectors';
 
 const mapStateToProps = (state: IReduxStore) => ({
-  mainDrawerData: asideDataSelector(state),
+  asideData: asideDataSelector(state),
+
 });
 
 const mapDispatchToProps = {
