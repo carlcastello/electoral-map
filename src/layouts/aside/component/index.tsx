@@ -1,8 +1,7 @@
 import React, { Component, ReactNode } from 'react';
+import withStyles from 'react-jss';
 
-import injectSheet from 'react-jss'
-
-import Assets from '../../../assets';
+import CardCarousel from '../../../components/card-carousel';
 
 import styles from './styles';
 import { IOwnProps, IReduxProps } from './types';
@@ -13,8 +12,8 @@ class Aside extends Component<IOwnProps & IReduxProps> {
     const {
       asideData: {
         banner: {
-          imageTitle,
-          imageUrl
+          src,
+          title
         }
       },
       classes: {
@@ -24,8 +23,8 @@ class Aside extends Component<IOwnProps & IReduxProps> {
     return (
       <img
         className={bannerImage}
-        alt={imageTitle}
-        src={imageUrl} />
+        alt={title}
+        src={src} />
     );
   }
 
@@ -45,9 +44,9 @@ class Aside extends Component<IOwnProps & IReduxProps> {
     } = this.props;
     return (
       <section>
-        <h1>
+        <h2>
           {title}
-        </h1>
+        </h2>
         <p>
           {intro}
         </p>
@@ -70,10 +69,20 @@ class Aside extends Component<IOwnProps & IReduxProps> {
   }
 
   renderCarousels(): ReactNode {
+    const {
+      asideData: {
+        features
+      }
+    } = this.props;
+    
     return (
-      <section>
-
-      </section>
+      features.map(({title, intro, slides}) => 
+        <CardCarousel
+          title={title}
+          intro={intro}
+          slides={slides}/>
+      )
+    
     );
   }
 
@@ -95,4 +104,4 @@ class Aside extends Component<IOwnProps & IReduxProps> {
   }
 }
 
-export default injectSheet(styles)(Aside);
+export default withStyles(styles)(Aside);

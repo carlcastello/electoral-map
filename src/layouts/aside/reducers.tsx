@@ -6,8 +6,8 @@ import { ICity } from './component/types';
 
 const initialStore: any = {
   banner: {
-    imageTitle: 'placehoder.jpg',
-    imageUrl: 'https://i.redd.it/xs5huy10hfk61.jpg'
+    title: 'placehoder.jpg',
+    src: 'https://i.redd.it/xs5huy10hfk61.jpg'
   },
   description: {
     title: 'Edmonton',
@@ -31,7 +31,69 @@ const initialStore: any = {
         ]
       }
     ]
-  }
+  },
+  features: [
+    {
+      title: 'Feature 1',
+      intro: 'Morbi id lectus in est feugiat tristique. Nullam pretium orci eu malesuada consequat.',
+      slides: [
+        {
+          cardHead: {
+            image: {
+              src: 'https://i.redd.it/xs5huy10hfk61.jpg',
+              title: 'akdjadja'
+            }
+          },
+          cardBody: {
+            title: 'Aenean at risus vehicula',
+            subTitle: 'Duis rhoncus augue risus. Cras in dolor sodales, placerat lorem vel, rutrum mi.'
+          }
+        }
+      ]
+    },
+    {
+      title: 'Feature 2',
+      intro: 'Morbi id lectus in est feugiat tristique. Nullam pretium orci eu malesuada consequat.',
+      slides: [
+        {
+          cardHead: {
+            image: {
+              src: 'https://i.redd.it/xs5huy10hfk61.jpg',
+              title: 'akdjadja'
+            }  
+          },
+          cardBody: {
+            title: 'Aenean at risus vehicula',
+            subTitle: 'Duis rhoncus augue risus. Cras in dolor sodales, placerat lorem vel, rutrum mi.'
+          }
+        },
+        {
+          cardHead: {
+            image: {
+              src: 'https://i.redd.it/xs5huy10hfk61.jpg',
+              title: 'akdjadja'
+            }  
+          },
+          cardBody: {
+            title: 'Aenean at risus vehicula',
+            subTitle: 'Duis rhoncus augue risus. Cras in dolor sodales, placerat lorem vel, rutrum mi.'
+          }
+        },
+        {
+          cardHead: {
+            image: {
+              src: 'https://i.redd.it/xs5huy10hfk61.jpg',
+              title: 'akdjadja'
+            }  
+          },
+          cardBody: {
+            title: 'Aenean at risus vehicula',
+            subTitle: 'Duis rhoncus augue risus. Cras in dolor sodales, placerat lorem vel, rutrum mi.'
+          }
+        }
+      ]
+    },
+  ]
 }
 
 export const asideReducer = createReducers(initialStore, {

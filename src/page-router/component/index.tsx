@@ -1,6 +1,6 @@
 import React, { Component, ReactNode } from 'react';
 
-import injectSheet from 'react-jss'
+import withStyles from 'react-jss'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -33,4 +33,4 @@ class PageRouter extends Component<IOwnProps>{
   }
 }
 
-export default injectSheet(styles)(PageRouter);
+export default withStyles(styles)(PageRouter);

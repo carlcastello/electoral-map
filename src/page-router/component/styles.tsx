@@ -8,14 +8,14 @@ export default (theme: any) => ({
     h1: {
       fontFamily: theme.typography.headingFontFamily,
       fontWeight: 600,
-      fontSize: '2.50rem',
+      fontSize: '3.50rem',
       margin: '1.5rem 0',
       
     },
     h2: {
       fontFamily: theme.typography.headingFontFamily,
       fontWeight: 600,
-      fontSize: '2.25rem',
+      fontSize: '2.5rem',
       lineHeight: 1.3,
     },
     h3: {
@@ -32,7 +32,8 @@ export default (theme: any) => ({
     h5: {
       fontFamily: theme.typography.headingFontFamily,
       fontWeight: 600,
-      fontSize: '1.5rem'
+      fontSize: '1.5rem',
+      margin: '1.5rem 0 0 0',
     },
     h6: {
       fontFamily: theme.typography.headingFontFamily,

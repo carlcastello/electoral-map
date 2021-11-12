@@ -1,6 +1,6 @@
 import React, { Component, ReactNode } from 'react';
 
-import injectSheet from 'react-jss'
+import withStyles from 'react-jss'
 
 import styles from './styles';
 import { IOwnProps } from './types';
@@ -21,4 +21,4 @@ class MainNavigation extends Component<IOwnProps> {
   }
 }
 
-export default injectSheet(styles)(MainNavigation);
+export default withStyles(styles)(MainNavigation);

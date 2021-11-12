@@ -1,11 +1,6 @@
-// export interface IMainDrawer {
-//   drawerState: boolean
-// }
+import { IImage } from '../../../common/types';
+import { ICarousel } from '../../../components/card-carousel/types';
 
-export interface IBanner {
-  imageTitle: string,
-  imageUrl: string
-}
 
 export interface IQuickFact {
   title: string,
@@ -19,8 +14,9 @@ export interface IDescription {
 }
 
 export interface ICity {
-  banner: IBanner,
-  description: IDescription
+  banner: IImage,
+  description: IDescription,
+  features: ICarousel[]
 }
 
 export interface IOwnProps {
