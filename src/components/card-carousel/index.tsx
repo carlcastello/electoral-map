@@ -32,7 +32,10 @@ class CardCarousel extends Component<ICarousel & IOwnProps> {
           className={multiCarousel}
           responsive={threeCardsResponsiveness}
           partialVisible={true}
-          itemClass="carousel-item" >
+          itemClass="carousel-item"
+          showDots={true}
+          dotListClass="carousel-dots"
+          arrows={false}>
           {slides.map(props => <Card {...props} />)}            
         </MultiCarousel>
       </section>
