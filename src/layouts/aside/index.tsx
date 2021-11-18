@@ -2,12 +2,13 @@ import { connect } from 'react-redux';
 
 import { IReduxStore } from '../../store/types';
 
-import MainDrawer from './component';
+import Aside from './component';
 
-import { mainDrawerDataSelector } from './selectors';
+import { asideDataSelector } from './selectors';
 
 const mapStateToProps = (state: IReduxStore) => ({
-  mainDrawerData: mainDrawerDataSelector(state),
+  asideData: asideDataSelector(state),
+
 });
 
 const mapDispatchToProps = {
@@ -16,4 +17,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(MainDrawer);
+)(Aside);

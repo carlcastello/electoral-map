@@ -3,5 +3,4 @@ export interface IOwnProps {
 }
 
 export interface IReduxProps {
-  handleDrawerToggle: (drawerState: boolean) => null
 }

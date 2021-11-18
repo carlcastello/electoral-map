@@ -1,4 +1,4 @@
-import { IMainDrawer } from "../components/main-drawer/component/types";
+import { ICity } from '../layouts/aside/component/types';
 
 export interface IAction {
   type: string,
@@ -11,5 +11,5 @@ export interface IHandlers {
 
 
 export interface IReduxStore {
-  mainDrawer: IMainDrawer
+  asideData: ICity
 }

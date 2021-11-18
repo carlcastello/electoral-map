@@ -1,6 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider } from 'react-jss';
+
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk'
