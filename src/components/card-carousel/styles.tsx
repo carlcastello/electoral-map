@@ -4,9 +4,8 @@ export default (theme: any) => ({
   multiCarousel: {
     // marginTop: `${theme.spacing * 2}px`,
     marginTop: [theme.spacing * 2],
-    paddingBottom: (props: any) => {
-      return [props.slides && props.slides.length > 0 ? theme.spacing * 2 : 0];
-    },
+    paddingBottom: (props: any) =>
+      [props.slides && props.slides.length > 1 ? theme.spacing * 2 : 0],
     '& .carousel-item > div': {
       paddingRight: [theme.spacing]
     },
