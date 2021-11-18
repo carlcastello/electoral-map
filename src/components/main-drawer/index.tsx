@@ -1,18 +1,19 @@
 import { connect } from 'react-redux';
 
-import { handleDrawerToggle } from '../../components/main-drawer/action';
 import { IReduxStore } from '../../store/types';
 
-import MunicipalWard from './component';
+import MainDrawer from './component';
+
+import { mainDrawerDataSelector } from './selectors';
 
 const mapStateToProps = (state: IReduxStore) => ({
+  mainDrawerData: mainDrawerDataSelector(state),
 });
 
 const mapDispatchToProps = {
-  handleDrawerToggle
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(MunicipalWard);
+)(MainDrawer);

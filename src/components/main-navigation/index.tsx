@@ -1,14 +1,13 @@
 import React, { Component, ReactNode } from 'react';
-import { AppBar, Button, Toolbar, Typography, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, } from '@mui/material';
 
 import { IOwnProps } from './types';
-// import { Box } from '@mui/system';
 
 class MainNavigation extends Component<IOwnProps> {
   
   render(): ReactNode {
     return (
-      <AppBar>
+      <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <Typography>
             Edmonton Municipal Elections

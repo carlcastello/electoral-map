@@ -1,29 +1,27 @@
 import React, { Component, ReactNode } from 'react';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import { ThemeProvider } from '@mui/material';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk'
 
-import MunicipalWard from '../pages/municipal-ward';
-import MainNavigation from '../components/main-navigation';
-import SidePanel from '../components/side-panel';
+import MainReducer from '../store/reducer';
 
 import { IOwnProps } from './types';
 import AppTheme from './app-theme';
+
+import PageRouter from '../page-router';
+
 
 class App extends Component<IOwnProps> {
 
   render(): ReactNode {
     return (
-      <ThemeProvider theme={AppTheme}>
-        <BrowserRouter>
-          <MainNavigation/>
-          <Switch>
-            <Route exact path="/" component={MunicipalWard} />
-          </Switch>
-          <SidePanel/>
-        </BrowserRouter>
-      </ThemeProvider>
+      <Provider store={createStore(MainReducer, applyMiddleware(thunkMiddleware))}>
+        <ThemeProvider theme={AppTheme}>
+          <PageRouter/>
+        </ThemeProvider>
+      </Provider>
     )
   } 
 }
